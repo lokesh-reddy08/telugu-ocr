@@ -1,6 +1,10 @@
 # Telugu OCR Tool 📜
 
-A Python-based OCR (Optical Character Recognition) tool for extracting Telugu text from images. Built using Tesseract OCR with support for confidence scoring and image preprocessing.
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Tesseract](https://img.shields.io/badge/Tesseract-5.0+-green.svg)](https://github.com/tesseract-ocr/tesseract)
+
+A Python-based OCR (Optical Character Recognition) tool for extracting Telugu text from images. Built using Tesseract OCR with support for confidence scoring, image preprocessing, and batch processing.
 
 ## ✨ Features
 
@@ -8,6 +12,9 @@ A Python-based OCR (Optical Character Recognition) tool for extracting Telugu te
 - **Confidence Scoring** - Get word-level confidence scores to identify potential OCR errors
 - **Image Preprocessing** - Grayscale conversion and Otsu thresholding for improved accuracy
 - **Mixed Language Support** - Works with Telugu + English mixed content
+- **Command Line Interface** - Easy-to-use CLI for quick processing
+- **Batch Processing** - Process entire folders with parallel execution
+- **Multiple Export Formats** - Export results as TXT, JSON, or CSV
 
 ## 🚀 Installation
 
@@ -62,14 +69,52 @@ processed_img = preprocess_image('low_quality_scan.png')
 text = pytesseract.image_to_string(processed_img, lang='tel')
 ```
 
+## 💻 Command Line Interface
+
+```bash
+# Basic usage
+python cli.py document.png
+
+# Save output to file
+python cli.py document.png -o result.txt
+
+# Process with confidence scores
+python cli.py document.png --confidence
+
+# Apply image preprocessing
+python cli.py document.png --preprocess
+
+# Mixed Telugu-English text
+python cli.py document.png --lang tel+eng
+
+# Batch process entire folder
+python cli.py ./scans/ --batch -o ./output/
+```
+
+## 📦 Batch Processing
+
+Process multiple images with parallel execution:
+
+```bash
+python batch_processor.py ./scanned_pages ./extracted_text
+```
+
+Features:
+- Multi-threaded processing (4 threads default)
+- Generates summary report (JSON/CSV)
+- Tracks confidence scores for quality control
+
 ## 📁 Project Structure
 
 ```
-telugu-ocr-project/
-├── ocr_telugu.py      # Main OCR module
-├── test_ocr.py        # Test suite
-├── requirements.txt   # Python dependencies
-├── README.md          # This file
+telugu-ocr/
+├── ocr_telugu.py        # Core OCR module
+├── cli.py               # Command line interface
+├── batch_processor.py   # Batch processing with parallelization
+├── test_ocr.py          # Test suite
+├── requirements.txt     # Python dependencies
+├── LICENSE              # MIT License
+├── README.md            # Documentation
 └── .gitignore
 ```
 
@@ -94,10 +139,21 @@ MIT License - Feel free to use and modify!
 
 ## 👤 Author
 
-**P. Lokesh Reddy**
-- B.Tech CSE (Cyber Security) - Geethanjali College of Engineering
-- BS Data Science - IIT Madras
+**Lokesh Reddy**
+
+- 📧 plokeshreddy5678@gmail.com
+- 🎓 B.Tech CSE (Cyber Security) - Geethanjali College of Engineering
+- 📊 BS Data Science - IIT Madras
+- 🔗 GitHub: [@lokeshreddy](https://github.com/lokeshreddy)
+
+## 🙏 Acknowledgments
+
+- [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - Open source OCR engine
+- [Telugu Wikisource](https://te.wikisource.org) - Telugu digital library
+- OKI-IIIT Hyderabad - Digital preservation initiative
 
 ---
 
-*Built for OKI-IIIT Hyderabad Digital Preservation Initiative*
+⭐ **Star this repo if you find it useful!**
+
+*Built for Telugu digital preservation and OKI-IIIT Hyderabad Initiative*

@@ -1,14 +1,17 @@
 """
-Telugu OCR Script using Tesseract
-For OKI-IIIT Hyderabad Internship Preparation
+Telugu OCR Module using Tesseract
+Extracts Telugu text from images with confidence scoring and preprocessing.
 
-Author: P. Lokesh Reddy
-Date: April 2026
+Author: Lokesh Reddy
+Repository: https://github.com/lokeshreddy/telugu-ocr
+License: MIT
+Version: 1.0.0
 
-SETUP:
-1. Install Tesseract: https://github.com/UB-Mannheim/tesseract/wiki
-   - Select Telugu language during installation
-2. pip install pytesseract pillow opencv-python
+Installation:
+    pip install pytesseract pillow opencv-python
+    
+    Tesseract: https://github.com/UB-Mannheim/tesseract/wiki
+    Telugu language pack required (tel.traineddata)
 """
 
 import pytesseract
