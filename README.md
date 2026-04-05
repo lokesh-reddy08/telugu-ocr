@@ -150,10 +150,8 @@ MIT License - Feel free to use and modify!
 
 - [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) - Open source OCR engine
 - [Telugu Wikisource](https://te.wikisource.org) - Telugu digital library
-- OKI-IIIT Hyderabad - Digital preservation initiative
+
 
 ---
 
-⭐ **Star this repo if you find it useful!**
 
-*Built for Telugu digital preservation and OKI-IIIT Hyderabad Initiative*
